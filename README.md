@@ -1,7 +1,10 @@
-# engenhos
+# Engenhos
+=============================
 Projeto de Integração com AzureDevOps
+-----------------------------
 
 Na aplicação do console, tem o arquivo de configuração onde pode alterar a url do azure devops, projeto.
+
 
 Arquivo: appsettings.json
 
@@ -19,8 +22,10 @@ Arquivo: appsettings.json
 }
 
 Para a integração com o AzureDevOps usei o Token de Acesso, é configurado na biblioteca da Infraestrutura, para Manter a segurança.:
+-----------------------------------------
 
 ./Engenhos.AzureDevOps\Engenhos.AzureDevOps.Infraestrutura\AzureDevOps\AccessTokenAzureDevOps.cs
+
 
 namespace Engenhos.AzureDevOps.Infraestrutura.AzureDevOps
 {
@@ -34,6 +39,8 @@ namespace Engenhos.AzureDevOps.Infraestrutura.AzureDevOps
 }
 
 Implementei o Migration, para criar a base de dados é necessário executar o update-migration na linha de comando do gerenciador de pacotes.
+-------------------------------
+
 
 namespace Engenhos.AzureDevOps.Infraestrutura.Contexto
 {
@@ -53,3 +60,4 @@ namespace Engenhos.AzureDevOps.Infraestrutura.Contexto
         }
     }
 }
+
