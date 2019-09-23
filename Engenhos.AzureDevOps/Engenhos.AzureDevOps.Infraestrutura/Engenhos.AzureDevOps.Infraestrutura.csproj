@@ -15,4 +15,10 @@
     <ProjectReference Include="..\Engenhos.AzureDevOps.Dominio\Engenhos.AzureDevOps.Dominio.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Hosting">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.hosting\2.1.1\lib\netstandard2.0\Microsoft.Extensions.Hosting.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

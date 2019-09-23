@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Engenhos.AzureDevOps.Aplicacao\Engenhos.AzureDevOps.Aplicacao.csproj" />
     <ProjectReference Include="..\Engenhos.AzureDevOps.Dominio\Engenhos.AzureDevOps.Dominio.csproj" />
     <ProjectReference Include="..\Engenhos.AzureDevOps.Infraestrutura\Engenhos.AzureDevOps.Infraestrutura.csproj" />
   </ItemGroup>

@@ -26,9 +26,17 @@
   <ItemGroup>
     <None Remove="ClientApp\src\components\Counter.js" />
     <None Remove="ClientApp\src\components\Counter.js" />
+    <None Remove="Ordenacoes\DataDESC.xml" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Ordenacoes\DataDESC.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Engenhos.AzureDevOps.Aplicacao\Engenhos.AzureDevOps.Aplicacao.csproj" />
     <ProjectReference Include="..\Engenhos.AzureDevOps.CrossCutting\Engenhos.AzureDevOps.CrossCutting.csproj" />
     <ProjectReference Include="..\Engenhos.AzureDevOps.Infraestrutura\Engenhos.AzureDevOps.Infraestrutura.csproj" />
   </ItemGroup>

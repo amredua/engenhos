@@ -29,6 +29,7 @@ namespace Engenhos.AzureDevOps.CrossCutting
         {
             builder.RegisterModule(new ModuloDomonioRepositorio());
             builder.RegisterModule(new ModuloDominioServico());
+            builder.RegisterModule(new ModuloAplicacao());
         }
     }
 }

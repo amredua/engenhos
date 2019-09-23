@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConfiguracaoOrdenacao xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Descricao>Data descendente</Descricao>
+  <NomeConfiguracao>DataDESC</NomeConfiguracao>
+  <Atributos>
+   <Atributo>
+      <Nome>DataCriacaoWorkItem</Nome>
+      <Ordenacao>AESC</Ordenacao>
+    </Atributo>
+  </Atributos>
+</ConfiguracaoOrdenacao>

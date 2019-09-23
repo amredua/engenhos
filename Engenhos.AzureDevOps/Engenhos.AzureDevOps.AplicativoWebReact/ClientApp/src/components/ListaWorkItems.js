@@ -1,4 +1,5 @@
 ﻿import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 export class ListaWorkItems extends Component {
     displayName = ListaWorkItems.name
@@ -6,70 +7,50 @@ export class ListaWorkItems extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { listaWorkItems: [], loading: true, isOldestFirst: true};
+        this.state = { listaWorkItems: [], loading: true };
 
         fetch('api/WorkItem/Index')
             .then(response => response.json())
             .then(data => {
-                this.setState({ listaWorkItems: data, loading: false, isOldestFirst: true});
+                this.setState({ listaWorkItems: data, loading: false });
             });
 
-        this.toggleListReverse = this.toggleListReverse.bind(this);
-        this.toggleSortDate = this.toggleSortDate.bind(this);
+        this.componentDidMount = this.componentDidMount.bind(this);
     }
 
-    sortByDate() {
-
-        const { listaWorkItems } = this.state;
-        let newListaWorkItems = listaWorkItems;
-
-        if (this.state.isOldestFirst) {
-            newListaWorkItems = listaWorkItems.sort((a, b) => a.dataCriacaoWorkItem > b.dataCriacaoWorkItem);
-        } else {
-            newListaWorkItems = listaWorkItems.sort((a, b) => a.dataCriacaoWorkItem < b.dataCriacaoWorkItem);
-        }
-
-        this.setState({
-            isOldestFirst: !this.state.isOldestFirst,
-            listaWorkItems: newListaWorkItems
-        });
+    componentDidMount() {
+        fetch('api/WorkItem/ObterWorkItemsPorOrdenacao?nomeOrdenacao=' + "DataDESC")
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ listaWorkItems: data, loading: false });
+            });
+        
     }
 
-    toggleSortDate() {
-        this.sortByDate();
-            }
-
-    toggleListReverse() {
-        const { listaWorkItems } = this.state;
-        let newListaWorkItems = listaWorkItems;
-        this.setState({
-            listaWorkItems: newListaWorkItems
-        });
-            }
 
     static renderListaWorkItemsTable(listaWorkItems) {
         return (
-            <table className = 'table' >
-                        <thead>
-                            <tr>
-                                <th>Titulo</th>
-                                <th>Tipo</th>
-                                <th>Data Criação
-                            <button onClick={this.toggleSortDate}>Order by date</button>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {listaWorkItems.map((work, index) =>
-                                <tr key={work.idWorkItem}>
-                                    <td>{work.titulo}</td>
-                                    <td>{work.tipo}</td>
-                                    <td>{work.dataCriacaoWorkItem}</td>
-                                </tr>
-                            )}
-                        </tbody>
+            <table className='table' >
+                <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Tipo</th>
+                        <th>Data Criação
+                            <button onClick={() => this.componentDidMount}>Ordenar</button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {listaWorkItems.map((work, index) =>
+                        <tr key={work.idWorkItem}>
+                            <td>{work.titulo}</td>
+                            <td>{work.tipo}</td>
+                            <td>{work.dataCriacaoWorkItem}</td>
+                        </tr>
+                    )}
+                </tbody>
             </table>
-           
+
         );
     }
 
