@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engenhos.AzureDevOps.Negocio", "Engenhos.AzureDevOps.Negocio\Engenhos.AzureDevOps.Negocio.csproj", "{997627B5-A755-4219-AE1A-0E618D5DA97F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engenhos.AzureDevOps.Dominio", "Engenhos.AzureDevOps.Dominio\Engenhos.AzureDevOps.Dominio.csproj", "{997627B5-A755-4219-AE1A-0E618D5DA97F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Apresentacao", "0-Apresentacao", "{6EEDB26B-C014-4C46-B195-25D1F5A92CDD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Negocio", "2-Negocio", "{5D66C873-515B-4CB9-B461-ED1F33499CA6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Dominio", "2-Dominio", "{5D66C873-515B-4CB9-B461-ED1F33499CA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Infraestrutura", "3-Infraestrutura", "{227D881C-E659-4D51-8F22-79DB7B501F93}"
 EndProject
@@ -18,6 +18,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engenhos.AzureDevOps.Aplicacao", "Engenhos.AzureDevOps.Aplicacao\Engenhos.AzureDevOps.Aplicacao.csproj", "{30C398DD-C952-4211-96F3-388671E55005}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engenhos.AzureDevOps.AplicativoConsole", "Engenhos.AzureDevOps.AplicativoConsole\Engenhos.AzureDevOps.AplicativoConsole.csproj", "{8A0A765F-27F5-4EA4-A145-5B850CC4D70D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engenhos.AzureDevOps.CrossCutting", "Engenhos.AzureDevOps.CrossCutting\Engenhos.AzureDevOps.CrossCutting.csproj", "{07CE678B-B946-4C1C-861B-44CA0CA6D4B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1", "3.1", "{A977FDAB-BC97-414D-9040-585B4A4A0FE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2", "3.2", "{5B2B61C6-275D-4809-A9AF-6F627A331715}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engenhos.AzureDevOps.AplicativoWebReact", "Engenhos.AzureDevOps.AplicativoWebReact\Engenhos.AzureDevOps.AplicativoWebReact.csproj", "{CD4C38C6-B4A1-45DA-AE17-3E577379E664}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,15 +49,27 @@ Global
 		{8A0A765F-27F5-4EA4-A145-5B850CC4D70D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A0A765F-27F5-4EA4-A145-5B850CC4D70D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A0A765F-27F5-4EA4-A145-5B850CC4D70D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07CE678B-B946-4C1C-861B-44CA0CA6D4B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07CE678B-B946-4C1C-861B-44CA0CA6D4B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07CE678B-B946-4C1C-861B-44CA0CA6D4B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07CE678B-B946-4C1C-861B-44CA0CA6D4B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD4C38C6-B4A1-45DA-AE17-3E577379E664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4C38C6-B4A1-45DA-AE17-3E577379E664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD4C38C6-B4A1-45DA-AE17-3E577379E664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD4C38C6-B4A1-45DA-AE17-3E577379E664}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{997627B5-A755-4219-AE1A-0E618D5DA97F} = {5D66C873-515B-4CB9-B461-ED1F33499CA6}
-		{F7AAE6D3-8EE5-41B0-ADD9-76E3BD543C5F} = {227D881C-E659-4D51-8F22-79DB7B501F93}
+		{F7AAE6D3-8EE5-41B0-ADD9-76E3BD543C5F} = {A977FDAB-BC97-414D-9040-585B4A4A0FE3}
 		{30C398DD-C952-4211-96F3-388671E55005} = {12317BAF-B7FB-46DD-97DF-9991911FBEB0}
 		{8A0A765F-27F5-4EA4-A145-5B850CC4D70D} = {6EEDB26B-C014-4C46-B195-25D1F5A92CDD}
+		{07CE678B-B946-4C1C-861B-44CA0CA6D4B1} = {5B2B61C6-275D-4809-A9AF-6F627A331715}
+		{A977FDAB-BC97-414D-9040-585B4A4A0FE3} = {227D881C-E659-4D51-8F22-79DB7B501F93}
+		{5B2B61C6-275D-4809-A9AF-6F627A331715} = {227D881C-E659-4D51-8F22-79DB7B501F93}
+		{CD4C38C6-B4A1-45DA-AE17-3E577379E664} = {6EEDB26B-C014-4C46-B195-25D1F5A92CDD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {18F3865E-56F1-4E1C-92E2-831BF2C9FB21}

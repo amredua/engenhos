@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Engenhos.AzureDevOps.Dominio\Engenhos.AzureDevOps.Dominio.csproj" />
     <ProjectReference Include="..\Engenhos.AzureDevOps.Infraestrutura\Engenhos.AzureDevOps.Infraestrutura.csproj" />
   </ItemGroup>
