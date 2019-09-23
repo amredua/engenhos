@@ -42,9 +42,7 @@ namespace Engenhos.AzureDevOps.Infraestrutura.AzureDevOps
             {
                 Query = "Select [State], [Title] " +
                         "From WorkItems " +
-                        //"Where [Work Item Type] = '[Any]' " +
                         "Where [System.TeamProject] = '" + project + "' " +
-                        //"And [System.State] <> 'Closed' " +
                         "Order By [State] Asc, [Changed Date] Desc"
             };
 
@@ -60,7 +58,6 @@ namespace Engenhos.AzureDevOps.Infraestrutura.AzureDevOps
                     //se não ocorrer nenhum erro                
                     if (workItemQueryResult.WorkItems.Count() != 0)
                     {
-                        //need to get the list of our work item ids and put them into an array
                         List<int> list = new List<int>();
                         foreach (var item in workItemQueryResult.WorkItems)
                         {
@@ -68,7 +65,6 @@ namespace Engenhos.AzureDevOps.Infraestrutura.AzureDevOps
                         }
                         int[] arr = list.ToArray();
 
-                        //build a list of the fields we want to see
                         string[] fields = new string[5];
                         fields[0] = "System.Id";
                         fields[1] = "System.Title";
@@ -76,12 +72,10 @@ namespace Engenhos.AzureDevOps.Infraestrutura.AzureDevOps
                         fields[3] = "System.WorkItemType";
                         fields[4] = "System.ChangedDate";
 
-                        //get work items for the ids found in query
                         var workItems = await workItemTrackingHttpClient.GetWorkItemsAsync(arr, fields, workItemQueryResult.AsOf);
 
                         Console.WriteLine("Resultado busca: {0} items encontrados", workItems.Count);
 
-                        //Exibe os valores no console
                         foreach (var workItem in workItems)
                         {
                             Console.WriteLine("{0}          {1}                     {2}", workItem.Id, workItem.Fields["System.Title"], workItem.Fields["System.State"]);

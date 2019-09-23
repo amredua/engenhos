@@ -1,18 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ConfiguracaoOrdenacao>
-  <NomeConfiguracao>TituloASCEEdicaoDESCAutorDESC</NomeConfiguracao>
+  <NomeConfiguracao>Data descendente</NomeConfiguracao>
   <atributos>
     <atributo>
-      <nome>Titulo</nome>
-      <ordenacao>ASCE</ordenacao>
-    </atributo>
-    <atributo>
-      <nome>Edicao</nome>
-      <ordenacao>DESC</ordenacao>
-    </atributo>
-    <atributo>
-      <nome>Autor</nome>
-      <ordenacao>DESC</ordenacao>
+      <nome>DataCriacaoWorkItem</nome>
+      <ordenacao>DataDESC</ordenacao>
     </atributo>
   </atributos>
 </ConfiguracaoOrdenacao>
